@@ -14,6 +14,10 @@ class Main {
     
 */
    
+    int x1 = 10;
+    int x2 = 90;
+    int sum = x1 + x2; 
+    System.out.println("the sum is:" + sum);
 
 
 /*  
@@ -24,7 +28,11 @@ class Main {
     
 */
 
-
+    int g1 = 85;
+    int g2 = 95;
+    int g3 = 90;
+    int total = g1 + g2 + g3; 
+    System.out.println("the sum of all grades:" + total);
 
 /*  
     Challenge 3:
@@ -34,6 +42,8 @@ class Main {
     NOTE: Does it look correct, check with a calculator?
 */
 
+    int avg = total/3; 
+    System.out.println("the sum of all grades:" + avg);
 
 
 /*  
@@ -43,6 +53,10 @@ class Main {
 
 */
   
+    int a = 4;
+    int x = 1;
+    int eq1 = a/ x+1;
+    System.out.println("eq1 is y=" + eq1);
 
 /*  
     Challenge 5:
@@ -51,8 +65,8 @@ class Main {
     Declare and assign values to any new variables
 
 */
- 
-
+    int eq2 = (2*x)*(x+1)*(-x/2)/a; 
+    System.out.println("eq2 is y=" + eq2);
 
 
 
@@ -65,9 +79,10 @@ class Main {
     Declare and assign values to any new variables
 */
  
-
-
-
+    int b = 2;
+    int h = 2;
+    int area = (1/2)*(b*h); 
+    System.out.println("eq3 area=" + area);
 
 
 /*  
