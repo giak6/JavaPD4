@@ -8,8 +8,8 @@ class Main {
 
   void init(){
      
-   System.out.printIn("Gia Kim");
-    
+  System.out.println("Gia Kim");
+  System.out.println("Gia Kim \nOcean");    
   } 
 
   
