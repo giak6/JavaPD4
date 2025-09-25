@@ -43,7 +43,7 @@ class Main {
 */
 
     int avg = total/3; 
-    System.out.println("the sum of all grades:" + avg);
+    System.out.println("the avg of all grades:" + avg);
 
 
 /*  
