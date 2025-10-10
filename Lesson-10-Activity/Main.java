@@ -11,17 +11,17 @@ class Main {
 	if( GPA >= 90){
 		return 'GPA * 1.1';
    }else{
-	 return 'GPA
+	 return GPA;
    }
 
-	if (graduating (12,45))
-   } system.out.println("student is graduating)
-	else 
-	system.out.println("student is not graduating")
-
-	if(is )
-
-	}
+	boolean isGraduating(String grade, int cred) {
+        if ("Senior"==grade && cred >= 44) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+	
 
 	 
 
