@@ -10,6 +10,19 @@ class Main {
    
   }
 
-  String 
+  String creditCardType(String card){
+    if(card.substring(0,1).equals("4")){
+      return "visa";
+    }
+    else if(card.substring(0,2).equals("34")|| card.substring(0,2).equals("37")){
+      return "American Express";
+    }
+    else if(card.substring(0,3).equals("36")){
+      return "Diner Club";
+    }
+  }
   
+  String pigLatin(String word){
+    return word.substring(1)+(word.substring(0,1))+("ay");
+  }
 }
