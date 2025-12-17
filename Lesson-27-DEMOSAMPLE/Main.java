@@ -1,4 +1,4 @@
- class Main {
+class Main {
   public static void main(String[] args) {
     (new Main()).init();
   }
@@ -63,102 +63,41 @@ sub2[23] = '.';
 sub2[24] = '/';
 sub2[25] = '⌂';
 
-print ( indexOf("",sub));
+print ( indexOf('c',sub));
 
 String file = Input.readFile("Original.txt");
 String encodedMsg = subEncode(file, sub, sub2);
-Input.writeFile("encode.txt", encodedMsg);
+Input.writeFile("Original.txt", encodedMsg);
 
 String decodedMsg = subEncode(encodedMsg, sub2, sub);
-Input.wrtieFile("decode.txt", decodedMsg);
+Input.writeFile("test.txt", decodedMsg);
 
 
 }
 String subEncode(String s, char[] sub, char[] sub2){
+    s = s.toLowerCase();
     String bld="";
     char ch = ' ';
     int index = 0;
-    for(int x=0; x<= s.lenght()-1; x++){
+    for(int x=0; x<= s.length()-1; x++){
         ch = s.charAt(x);
         index = indexOf(ch, sub);
         if( index != -1){
             bld+= sub2[index];
         }
-    }
+        else{
+          bld+= ch;
+        }
+      }
+    return bld;
 }
 
 int indexOf(char ch, char[] arry){
   for(int x=0; x<= arry.length-1; x++){
-    if(array[x]== ch){
+    if(arry[x]== ch){
       return x;
     }
   }
+  return -1;
 }
-    
-    // Encoding message
-    String file = Input.readFile("test.txt");
-
-    //substituion
-    String encodedMsg1 = subEncryption(file,sub,sub2);
-    //Input.writeFile("Encode1.txt",encodedMsg1);
-
-    // caesar cipher
-    String encodedMsg2 = encode(encodedMsg1);
-    //Input.writeFile("Encode2.txt",encodedMsg2);
-
-    // reverse
-    String encodedMsg3 = reverse(encodedMsg2);
-    Input.writeFile("Encode3.txt",encodedMsg3);
-
-    
-    // decoding message
-    String file2 = Input.readFile("Encode1.txt");
-    
-    String decodedMsg1 = reverse(file2);
-    //Input.writeFile("Decode1.txt", decodedMsg1);
-    
-    String decodedMsg2 = decode(decodedMsg1);
-    //Input.writeFile("Decode2.txt", decodedMsg2);
-    
-     String decodedMsg3 = subEncryption(decodedMsg2, sub2, sub);
-    //Input.writeFile("Decode1.txt", decodedMsg3);
-    
-    
-  }
-  // Level 1 reverse string
-  String reverse(String txt){
-    String bld ="";
-    
-    return bld;
-  }
-  
-  
-  //Level 2 Cipher encoding with no wrapping
-  String encode(String txt){
-    String bld="";
-    
-     
-    return bld;
-  }
-
-  
-  String decode(String txt){
-    String bld="";
-   
-    return bld;
-  }
-
-  // Level 3 Substituion encoding
-  String subEncryption(String s, char[] sub, char[] sub2){
-    String bld="";
-   
-    return bld;
-  }
-  
-  
-  int randInt(int lower, int upper){
-    int range = upper - lower;
-    return (int)(Math.random()*range+lower);
-  }
-
-}
+ }
