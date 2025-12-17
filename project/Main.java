@@ -63,41 +63,39 @@ sub2[23] = '.';
 sub2[24] = '/';
 sub2[25] = '⌂';
 
-print ( indexOf('c',sub));
-
 String file = Input.readFile("Original.txt");
+
 String encodedMsg = subEncode(file, sub, sub2);
-Input.writeFile("Original.txt", encodedMsg);
+
+print("Encoded Message:");
+print(encodedMsg);
 
 String decodedMsg = subEncode(encodedMsg, sub2, sub);
-Input.writeFile("test.txt", decodedMsg);
+
+print("\nDecoded Message:");
+print(decodedMsg);
+
 
 
 }
 String subEncode(String s, char[] sub, char[] sub2){
-    s = s.toLowerCase();
-    String bld="";
-    char ch = ' ';
-    int index = 0;
-    for(int x=0; x<= s.length()-1; x++){
-        ch = s.charAt(x);
-        index = indexOf(ch, sub);
-        if( index != -1){
-            bld+= sub2[index];
+        s = s.toLowerCase(); 
+        String bld = "";
+        for(int x = 0; x < s.length(); x++){
+            char ch = s.charAt(x);
+            int index = indexOf(ch, sub);
+            if(index != -1){
+                bld += sub2[index];
+            } else {
+                bld += ch; 
+            }
         }
-        else{
-          bld+= ch;
-        }
-      }
-    return bld;
-}
-
-int indexOf(char ch, char[] arry){
-  for(int x=0; x<= arry.length-1; x++){
-    if(arry[x]== ch){
-      return x;
+        return bld;
     }
-  }
-  return -1;
+    int indexOf(char ch, char[] arry){
+        for(int x = 0; x < arry.length; x++){
+            if(arry[x] == ch) return x;
+        }
+        return -1;
+    }
 }
- }
