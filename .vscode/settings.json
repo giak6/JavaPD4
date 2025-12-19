@@ -1,5 +1,8 @@
 {
     "java.project.sourcePaths": [
+        "project2",
+        "project",
+        "PROJECT/project/project3",
         "Lesson-22-Classwork",
         "Lesson-21-Activity",
         "Lesson-19-Classwork",
@@ -17,6 +20,6 @@
         "Lesson-05-activity",
         "Lesson-03b-Classwork",
         "Lesson-03-Discussion",
-        "Lesson-27-DEMOSAMPLE"
+        "project3"
     ]
 }
