@@ -26,13 +26,13 @@ class Main {
         //VIGENERE CIPHER
         String key = "KEY";
         String vigEncoded = vigenereEncrypt(original, key);
-        print("\nVigenere Encoded");
+        print("\nVigenere Encoded:");
         print(vigEncoded);
 
 
         // RAIL FENCE
         String railEncoded = encode(original);
-        print("\nRail Fence Encoded");
+        print("\nRail Fence Encoded:");
         print(railEncoded);
     }
 
